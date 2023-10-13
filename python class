@@ -1,0 +1,20 @@
+# Create a dictionary with categories as keys and lists of subjects as values
+subjects_dict = {
+    "Compulsory": ["English", "Mathematics", "Social Studies", "Civic Education"],
+    "Science": ["Physics", "Chemistry", "Biology"],
+    "Arts": ["Literature", "History", "Fine Arts"],
+    "Technical": ["Computer Science", "Engineering Drawing", "Technical Education"]
+}
+
+# Function to display subjects based on a category
+def display_subjects_by_category(category):
+    if category in subjects_dict:
+        subjects = subjects_dict[category]
+        for index, subject in enumerate(subjects, start=1):
+            print(f"{index}. {subject}")
+    else:
+        print("Category not found.")
+
+# Input from the user
+category = input("Enter the category: ")
+display_subjects_by_category(category)
